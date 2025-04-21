@@ -2,6 +2,7 @@ import { serve } from "https://deno.land/std@0.155.0/http/server.ts"; // 或更�
 
 async function handler(req: Request): Promise<Response> {
   const incomingUrl = new URL(req.url);
+  console.log(`incomingUrl: ${req.url}`);
   if (incomingUrl.pathname === "/") {
     return new Response(
       "此地址只用于为astrbot提供更快速的github访问服务",
